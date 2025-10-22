@@ -4,9 +4,17 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        // lambda function for addition
         MathOperator addition = (a, b) -> a + b;
+
+        // lambda function for subtraction
         MathOperator subtraction = (a, b) -> a - b;
+
+        // lambda function for multiplication
         MathOperator multiplication = (a, b) -> a * b;
+
+        // lambda function for division
+        // if b is zero, function throws Arithmetic Exception.
         MathOperator division = (a, b) ->{
             if(b== 0){
                 throw new ArithmeticException("Divider must not be zero");
@@ -26,15 +34,22 @@ public class Main {
             String op = sc.next();
 
             switch (op){
+                // addition
                 case "+":
                     System.out.println(addition.operate(op1,op2));
                     break;
+
+                // subtraction
                 case "-":
                     System.out.println(subtraction.operate(op1,op2));
                     break;
+
+                // multiplication
                 case "*":
                     System.out.println(multiplication.operate(op1,op2));
                     break;
+
+                // division
                 case "/":
                     try {
                         System.out.println(division.operate(op1, op2));
@@ -42,8 +57,10 @@ public class Main {
                         System.out.println(e.getMessage());
                     }
                     break;
+
+                // invalid input
                 default:
-                    System.out.println("Invalid Operator");
+                    System.out.println("Invalid Operator.");
             }
 
             System.out.println("Do you want to Continue? (y/n)");
@@ -52,6 +69,5 @@ public class Main {
                 break;
             }
         }
-
     }
 }

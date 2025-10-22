@@ -16,15 +16,23 @@ public class Main {
             String op = sc.next();
 
             switch (op){
+                // addition
                 case "+":
                     System.out.println(calculator.add(op1,op2));
                     break;
+
+                //subtraction
                 case "-":
                     System.out.println(calculator.subtract(op1,op2));
                     break;
+
+                //multiplication
                 case "*":
                     System.out.println(calculator.multiply(op1,op2));
                     break;
+
+                //division
+                // must handle divide by zero exception
                 case "/":
                     try {
                         System.out.println(calculator.divide(op1, op2));
@@ -32,6 +40,8 @@ public class Main {
                         System.out.println(e.getMessage());
                     }
                     break;
+
+                // invalid input
                 default:
                     System.out.println("Invalid operator");
             }

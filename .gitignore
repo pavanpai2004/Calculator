@@ -3,6 +3,8 @@ out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 .kotlin
+.idea/
+Calculator.iml
 
 ### Eclipse ###
 .apt_generated
@@ -25,7 +27,5 @@ bin/
 
 ### VS Code ###
 .vscode/
-.idea/
-Calculator.iml
 ### Mac OS ###
 .DS_Store
